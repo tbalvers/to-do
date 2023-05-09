@@ -1,0 +1,134 @@
+body {
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+    background-color: #eeeeee;
+}
+
+.main {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.add {
+    width: 2rem;
+}
+
+.current {
+    background-color: #dddddd;
+    box-shadow: 0px 2px 2px #cccccc;
+}
+
+.projects {
+    display: grid;
+    gap: 3px;
+    align-items: center;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+}
+
+.project {
+    padding-left: 1rem;
+    height: 2rem;
+    display: grid;
+    align-items: center;
+}
+
+.stack {
+    display: grid;
+    min-width: 50%;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.toDo {
+    display: grid;
+    grid-template-columns: 3rem 4fr 2fr;
+    align-items: center;
+    height: 2rem;
+    background-color: #eeeeee;
+    border-left: solid 3px #eeeeee;
+    cursor: pointer;
+
+}
+
+.toDo:hover {
+    box-shadow: 4px 4px 4px #dddddd;
+}
+
+#addTaskButton {
+    width: fit-content;
+    height: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    border-color:rgb(158, 169, 162);
+    border-width: 2px;
+    border-style: solid;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+    filter: brightness(30%);
+}
+
+#addTaskButton:hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+img {
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    top: 30%;
+    background-color: white;
+    width: 20vh;
+    height: 20vh;
+    border-color:rgb(158, 169, 162);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #eeeeee;
+    padding: 2rem;
+}
+
+.modal button {
+    align-self: flex-end;
+}
+
+.priority {
+    border-left: solid 3px red;
+}
+
+.title, .dueDate {
+    pointer-events: none;
+}
+
+.complete {
+    text-decoration: line-through;
+    filter: opacity(50%);
+}
+
+.edit {
+    width: 2rem;
+}
+
+.sidebar input {
+    position: relative;
+    bottom: 0.5rem;
+}
